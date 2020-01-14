@@ -55,3 +55,5 @@ model.fit(X_train, y_train,
           batch_size=config.batch_size,
           epochs=config.epochs,
           validation_data=(X_test, y_test), callbacks=[WandbCallback()])
+filename = 'finalized_model.sav'
+joblib.dump(model, filename)
